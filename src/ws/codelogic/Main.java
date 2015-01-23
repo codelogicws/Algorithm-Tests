@@ -13,7 +13,4 @@ public class Main {
         ArrayUtil.print(test2DArray);
     }
 
-    public static void print(String string){
-        System.out.println(string);
-    }
 }
