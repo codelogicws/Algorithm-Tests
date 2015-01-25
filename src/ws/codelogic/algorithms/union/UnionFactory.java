@@ -11,6 +11,11 @@ public class UnionFactory {
         return new QuickUnion(getOrderedArray(size));
     }
 
+    public static Union<Integer> makeQuickUnionPathCompression(int size){
+        Integer[] branchPointer = getOrderedArray(size);
+        return new QuickUnionPathCompression(branchPointer);
+    }
+
     public static Union makeQuickUnionWeighted(int size){
         Integer[] branchPointer = getOrderedArray(size);
         Integer[] treeSize = getRepeatArray(size, 1);
