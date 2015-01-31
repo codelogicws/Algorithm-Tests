@@ -11,7 +11,6 @@ public class BinarySearch implements Search{
         this.array = array;
     }
 
-    @Override
     public boolean hasMatch(int checkFor) {
         min = 0;
         max = array.length - 1;
