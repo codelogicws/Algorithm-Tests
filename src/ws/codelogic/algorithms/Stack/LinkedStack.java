@@ -7,6 +7,7 @@ public class LinkedStack {
 
     public LinkedStack(){
         firstNode = new Node();
+        size = 0;
     }
 
     public void push(String item) {
@@ -19,8 +20,7 @@ public class LinkedStack {
 
     public String pop() {
         String returnItem = "";
-        if(size <= 0){
-            System.out.println("This gets called");
+        if(isEmpty()){
             throw new StackUnderFlow();
         }else{
             returnItem = performPop();
@@ -30,8 +30,13 @@ public class LinkedStack {
 
     private String performPop(){
         size--;
+        Node lastNode = firstNode;
         firstNode = firstNode.next;
-        return firstNode.item;
+        return lastNode.item;
+    }
+
+    public boolean isEmpty() {
+        return size <= 0;
     }
 
     class Node{

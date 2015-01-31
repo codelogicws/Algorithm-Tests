@@ -23,4 +23,20 @@ public class LinkStackTest {
     public void testOverPop() {
         stack.pop();
     }
+
+    @Test
+    public void testCanEmptyOutStack(){
+        stack.push("ummm");
+        assertFalse(stack.isEmpty());
+        stack.pop();
+        assertTrue(stack.isEmpty());
+    }
+
+    @Test
+    public void testWhenItemIsPushedItsOnTop(){
+        stack.push("big");
+        stack.push("foo");
+        stack.push("bar");
+        assertEquals("bar", stack.pop());
+    }
 }
