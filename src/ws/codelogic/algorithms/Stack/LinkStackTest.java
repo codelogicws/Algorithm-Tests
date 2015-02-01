@@ -39,4 +39,13 @@ public class LinkStackTest {
         stack.push("bar");
         assertEquals("bar", stack.pop());
     }
+
+    @Test
+    public void WhenOneAndTwoArePushed_TwoAndOneArePoped(){
+        stack.push("One");
+        stack.push("Two");
+        assertEquals("Two", stack.pop());
+        assertEquals("One", stack.pop());
+    }
+
 }

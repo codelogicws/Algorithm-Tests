@@ -1,17 +1,32 @@
 package ws.codelogic.algorithms.Stack;
 
-public class ArrayStack {
+public class ArrayStack implements Stack {
 
     private int size;
     private int capacity;
     private String[] elements;
 
-    public ArrayStack(int capacity) {
+    public static Stack make(int capacity){
+        checkForCapacityOutOfBounds(capacity);
+        Stack stack;
+        if(capacity == 0)
+            return stack = new ArrayStackZero();
+        return new ArrayStack(capacity);
+    }
+
+    private static void checkForCapacityOutOfBounds(int capacity) {
+        if(capacity < 0){
+            throw new CapacityOutOfBounds();
+        }
+    }
+
+    private ArrayStack(int capacity) {
         size = 0;
         this.capacity = capacity;
         elements = new String[capacity];
     }
 
+    @Override
     public void push(String item) {
         checkForOverFlow();
         elements[size] = item;
@@ -24,10 +39,12 @@ public class ArrayStack {
         }
     }
 
+    @Override
     public int size() {
         return size;
     }
 
+    @Override
     public String pop() {
         checkForUnderFlow();
         size--;
@@ -40,9 +57,4 @@ public class ArrayStack {
         }
     }
 
-    public class OverFlow extends RuntimeException{
-    }
-
-    public class UnderFlow extends RuntimeException{
-    }
 }
