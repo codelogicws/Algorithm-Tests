@@ -14,4 +14,12 @@ public class DijkstrasTwoStackTest {
         assertEquals("101", test);
     }
 
+    @Test
+    public void tryAnotherExpression() {
+        DijkstrasTwoStack evaluation = new DijkstrasTwoStack("(1+((6/2)+(6-2)))");
+        String test = evaluation.solve();
+        String realAnswer = (1+(6/2)+(6-2)) + "";
+        assertEquals(realAnswer, test);
+    }
+
 }

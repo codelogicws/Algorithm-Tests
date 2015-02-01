@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0df396c-fa17-45ba-b6c2-2139efc25b1b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ws/codelogic/algorithms/Stack/ArrayStackZero.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ws/codelogic/algorithms/arithmetic/evaluation/DijkstrasTwoStack.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ws/codelogic/algorithms/arithmetic/evaluation/DijkstrasTwoStackTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ws/codelogic/algorithms/Stack/Stack.java" />
-      <change type="DELETED" beforePath="E:\Workspace\Algorithms\out\production\Algorithms\ws\codelogic\algorithms\Stack\ArrayStack$OverFlow.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Workspace\Algorithms\out\production\Algorithms\ws\codelogic\algorithms\Stack\ArrayStack$UnderFlow.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Algorithms/ws/codelogic/algorithms/Stack/ArrayStack.class" afterPath="$PROJECT_DIR$/out/production/Algorithms/ws/codelogic/algorithms/Stack/ArrayStack.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Algorithms/ws/codelogic/algorithms/Stack/ArrayStackTest.class" afterPath="$PROJECT_DIR$/out/production/Algorithms/ws/codelogic/algorithms/Stack/ArrayStackTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Algorithms/ws/codelogic/algorithms/Stack/LinkStackTest.class" afterPath="$PROJECT_DIR$/out/production/Algorithms/ws/codelogic/algorithms/Stack/LinkStackTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Algorithms/ws/codelogic/test/TestSuite.class" afterPath="$PROJECT_DIR$/out/production/Algorithms/ws/codelogic/test/TestSuite.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ws/codelogic/algorithms/Stack/ArrayStack.java" afterPath="$PROJECT_DIR$/src/ws/codelogic/algorithms/Stack/ArrayStack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ws/codelogic/algorithms/Stack/ArrayStackTest.java" afterPath="$PROJECT_DIR$/src/ws/codelogic/algorithms/Stack/ArrayStackTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ws/codelogic/algorithms/Stack/LinkStackTest.java" afterPath="$PROJECT_DIR$/src/ws/codelogic/algorithms/Stack/LinkStackTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ws/codelogic/test/TestSuite.java" afterPath="$PROJECT_DIR$/src/ws/codelogic/test/TestSuite.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Algorithms/ws/codelogic/algorithms/arithmetic/evaluation/DijkstrasTwoStack.class" afterPath="$PROJECT_DIR$/out/production/Algorithms/ws/codelogic/algorithms/arithmetic/evaluation/DijkstrasTwoStack.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Algorithms/ws/codelogic/algorithms/arithmetic/evaluation/DijkstrasTwoStackTest.class" afterPath="$PROJECT_DIR$/out/production/Algorithms/ws/codelogic/algorithms/arithmetic/evaluation/DijkstrasTwoStackTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ws/codelogic/algorithms/arithmetic/evaluation/DijkstrasTwoStack.java" afterPath="$PROJECT_DIR$/src/ws/codelogic/algorithms/arithmetic/evaluation/DijkstrasTwoStack.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ws/codelogic/algorithms/arithmetic/evaluation/DijkstrasTwoStackTest.java" afterPath="$PROJECT_DIR$/src/ws/codelogic/algorithms/arithmetic/evaluation/DijkstrasTwoStackTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Algorithms.iws" />
@@ -45,7 +35,7 @@
       <file leaf-file-name="ArrayStackTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ws/codelogic/algorithms/Stack/ArrayStackTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1343">
+            <state vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1343">
               <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -64,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DijkstrasTwoStackTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DijkstrasTwoStackTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ws/codelogic/algorithms/arithmetic/evaluation/DijkstrasTwoStackTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.36690646" vertical-offset="0" max-vertical-offset="695">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,11 +66,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DijkstrasTwoStack.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DijkstrasTwoStack.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ws/codelogic/algorithms/arithmetic/evaluation/DijkstrasTwoStack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26906475" vertical-offset="0" max-vertical-offset="1275">
-              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+              <caret line="0" column="53" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -89,7 +79,7 @@
       <file leaf-file-name="TestSuite.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ws/codelogic/test/TestSuite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+            <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="238">
               <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
               <folding />
             </state>
@@ -109,7 +99,7 @@
       <file leaf-file-name="Stack.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ws/codelogic/algorithms/Stack/Stack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="408">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
               <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
               <folding />
             </state>
@@ -1215,24 +1205,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ws/codelogic/algorithms/Stack/Stack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
-          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ws/codelogic/algorithms/Stack/ArrayStackTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1343">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ws/codelogic/algorithms/Stack/ArrayStack.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="63" max-vertical-offset="1122">
@@ -1249,21 +1221,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ws/codelogic/algorithms/arithmetic/evaluation/DijkstrasTwoStackTest.java">
+    <entry file="file://$PROJECT_DIR$/src/ws/codelogic/algorithms/Stack/ArrayStackTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1343">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ws/codelogic/algorithms/Stack/Stack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ws/codelogic/algorithms/arithmetic/evaluation/DijkstrasTwoStack.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26906475" vertical-offset="0" max-vertical-offset="1275">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1411">
+          <caret line="0" column="53" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ws/codelogic/algorithms/arithmetic/evaluation/DijkstrasTwoStackTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36690646" vertical-offset="0" max-vertical-offset="695">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

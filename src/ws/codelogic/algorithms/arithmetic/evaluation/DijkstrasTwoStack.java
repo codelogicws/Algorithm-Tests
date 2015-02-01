@@ -32,7 +32,11 @@ public class DijkstrasTwoStack {
             workTopProblem();
         }else if(ch == '+'){
             operations.push(ch);
-        }else if(ch == '*'){
+        }else if(ch == '*') {
+            operations.push(ch);
+        }else if(ch == '/') {
+            operations.push(ch);
+        }else if(ch == '-'){
             operations.push(ch);
         }else if(ch == '('){
             //do nothing
@@ -42,8 +46,8 @@ public class DijkstrasTwoStack {
     }
 
     private void workTopProblem() {
-        int value1 = values.pop();
         int value2 = values.pop();
+        int value1 = values.pop();
         char operation = operations.pop();
         int result = operation(value1, value2, operation);
         values.push(result);
@@ -55,6 +59,10 @@ public class DijkstrasTwoStack {
             result = value1 * value2;
         }else if(operation == '+'){
             result = value1 + value2;
+        }else if(operation == '-'){
+            result = value1 - value2;
+        }else if(operation == '/'){
+            result = value1 / value2;
         }
         return result;
     }
