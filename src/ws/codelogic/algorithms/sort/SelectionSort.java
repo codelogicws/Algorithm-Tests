@@ -12,14 +12,15 @@ public class SelectionSort{
     public void sort() {
         for(int i=0;i<array.length;i++){
             Comparable lowestValue = array[i];
-            int lowestIndex = i;
-            for(int x=i+1;x<array.length;x++){
-                if(array[x].compareTo(lowestValue) < 0){
-                    lowestValue = array[x];
-                    lowestIndex = x;
-                }
+            FindAndSwitchWithLowerValues(i, lowestValue);
+        }
+    }
+
+    private void FindAndSwitchWithLowerValues(int i, Comparable lowestValue) {
+        for(int x=i+1;x<array.length;x++){
+            if(array[x].compareTo(lowestValue) < 0){
+                swapMinDown(i, x, array[x]);
             }
-            swapMinDown(i, lowestIndex, lowestValue);
         }
     }
 
@@ -31,4 +32,6 @@ public class SelectionSort{
     public Comparable[] getArray() {
         return array;
     }
+    
+
 }
