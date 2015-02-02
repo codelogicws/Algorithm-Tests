@@ -32,6 +32,6 @@ public class SelectionSort{
     public Comparable[] getArray() {
         return array;
     }
-    
+
 
 }
