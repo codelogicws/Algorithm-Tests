@@ -19,10 +19,13 @@ public class SelectionSort{
                     lowestIndex = x;
                 }
             }
-            Comparable temp = array[i];
-            array[i] = lowestValue;
-            array[lowestIndex] = temp;
+            swapMinDown(i, lowestIndex, lowestValue);
         }
+    }
+
+    private void swapMinDown(int leftIndex, int rightIndex, Comparable min) {
+        array[rightIndex] = array[leftIndex];
+        array[leftIndex] = min;
     }
 
     public Comparable[] getArray() {
