@@ -16,4 +16,10 @@ public class InsertionSortTest extends SortTest{
     public void correctOrderIsReturned() {
         correctOrderIsReturned(sorter);
     }
+
+    @Test
+    public void correctOrderWithCharaters() {
+        sorter = new InsertionSort(unsorted2);
+        orderCharatersInTheCorrectWay(sorter);
+    }
 }

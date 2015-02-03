@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class SelectionSortTest extends SortTest{
 
-    private SelectionSort sorter;
+    private Sort sorter;
 
     @Before
     public void setUp() {
@@ -15,5 +15,11 @@ public class SelectionSortTest extends SortTest{
     @Test
     public void correctOrderIsReturned() {
         correctOrderIsReturned(sorter);
+    }
+
+    @Test
+    public void correctOrderWithCharaters() {
+        sorter = new SelectionSort(unsorted2);
+        orderCharatersInTheCorrectWay(sorter);
     }
 }

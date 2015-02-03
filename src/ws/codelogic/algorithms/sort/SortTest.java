@@ -15,4 +15,19 @@ public class SortTest {
         Integer[] result = (Integer[])sorter.getArray();
         assertEquals(sorted, result);
     }
+
+    public void orderCharatersInTheCorrectWay(Sort sorter){
+        printArray(unsorted2);
+        sorter.sort();
+        printArray((Character[])sorter.getArray());
+        Character[] result = (Character[])sorter.getArray();
+        assertEquals(sorted2, result);
+    }
+
+    private void printArray(Character[] array) {
+        for(Character c : array){
+            System.out.print(c + ", ");
+        }
+        System.out.println("---------");
+    }
 }
