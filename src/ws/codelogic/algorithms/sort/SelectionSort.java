@@ -10,17 +10,22 @@ public class SelectionSort extends Sort{
 
 
     public void sort() {
-        for(int i=0;i<array.length;i++){
-            Comparable lowestValue = array[i];
-            FindAndSwitchWithLowerValues(i, lowestValue);
+        for(int selected=0;selected<array.length;selected++){
+            replaceWithSmallestUnsorted(selected);
         }
     }
 
-    private void FindAndSwitchWithLowerValues(int i, Comparable lowestValue) {
-        for(int x=i+1;x<array.length;x++){
-            if(array[x].compareTo(lowestValue) < 0){
-                swapMinDown(i, x, array[x]);
-            }
+    private void replaceWithSmallestUnsorted(int selected) {
+        Comparable lowestValue = array[selected];
+        for(int unsortedSelect=selected+1;   unsortedSelect<array.length;   unsortedSelect++){
+            sortIndex(selected, lowestValue, unsortedSelect);
+        }
+    }
+
+    private void sortIndex(int i, Comparable lowestValue, int x) {
+        boolean xIsLessThenLowestValue = array[x].compareTo(lowestValue) < 0;
+        if(xIsLessThenLowestValue){
+            swapMinDown(i, x, array[x]);
         }
     }
 
