@@ -2,7 +2,7 @@ package ws.codelogic.algorithms.sort;
 
 public abstract class Sort {
 
-    private Comparable[] array;
+    protected Comparable[] array;
 
     abstract public void sort();
 
