@@ -1,6 +1,6 @@
 package ws.codelogic.algorithms.sort;
 
-public class SelectionSort{
+public class SelectionSort extends Sort{
 
     private final Comparable[] array;
 

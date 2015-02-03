@@ -1,6 +1,6 @@
 package ws.codelogic.algorithms.sort;
 
-public class InsertionSort {
+public class InsertionSort extends Sort{
 
     private final Comparable[] array;
     private int currentIndex;
