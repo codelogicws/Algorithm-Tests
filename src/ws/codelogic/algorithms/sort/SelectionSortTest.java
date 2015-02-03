@@ -17,9 +17,9 @@ public class SelectionSortTest extends SortTest{
         correctOrderIsReturned(sorter);
     }
 
-    @Test
-    public void correctOrderWithCharaters() {
-        sorter = new SelectionSort(unsorted2);
-        orderCharatersInTheCorrectWay(sorter);
-    }
+//    @Test
+//    public void correctOrderWithCharaters() {
+//        sorter = new SelectionSort(unsorted2);
+//        orderCharatersInTheCorrectWay(sorter);
+//    }
 }
