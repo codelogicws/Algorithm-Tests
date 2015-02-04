@@ -23,7 +23,17 @@ public class ShellSort extends Sort{
     }
 
     public void sort() {
-        printArrayList(intervals);
+        for(int i=intervals.size()-1;i>=0;i--){
+            interval = intervals.get(i);
+            intervalSort();
+        }
+    }
+
+    private void intervalSort() {
+        for(inner=0; inner+interval<array.length; inner++){
+            System.out.println("debug-ShellSort: inner " + inner);
+            printArrayList(intervals);
+        }
     }
 
     private void printArrayList(ArrayList<Integer> intervals) {
