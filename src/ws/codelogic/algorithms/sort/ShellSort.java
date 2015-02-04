@@ -54,16 +54,9 @@ public class ShellSort extends Sort{
     }
 
     private void swap(int inner, int outer) {
-        System.out.println("debug-ShellSort: ");
         temp = array[inner];
         array[inner] = array[outer];
         array[outer] = temp;
-    }
-
-    private void printArrayList(ArrayList<Integer> intervals) {
-        for(Integer numb : intervals){
-            System.out.println("debug-ShellSort: " + numb);
-        }
     }
 
 }

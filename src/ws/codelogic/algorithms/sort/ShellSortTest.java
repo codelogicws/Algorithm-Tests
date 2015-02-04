@@ -17,4 +17,9 @@ public class ShellSortTest extends SortTest{
         sorter = new ShellSort(unsorted2);
         orderCharatersInTheCorrectWay(sorter);
     }
+
+    @Test
+    public void correctOrderIsReturnedWithIntegers() {
+        correctOrderIsReturned(sorter);
+    }
 }
