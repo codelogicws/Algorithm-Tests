@@ -21,7 +21,7 @@ public class SelectionSort extends Sort{
 
     private void replaceWithSmallestUnsorted(){
         findSmallest();
-        exchangeCurrentWithLowest();
+        exchangeStageWithLowest();
     }
 
     private void findSmallest(){
@@ -40,7 +40,7 @@ public class SelectionSort extends Sort{
         }
     }
 
-    private void exchangeCurrentWithLowest() {
+    private void exchangeStageWithLowest() {
         array[stage.index] = lowest.value;
         array[lowest.index] = stage.value;
     }
