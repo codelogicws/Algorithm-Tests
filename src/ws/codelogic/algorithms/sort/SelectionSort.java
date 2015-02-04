@@ -14,30 +14,29 @@ public class SelectionSort extends Sort{
 
     public void sort() {
         for(int selected=0;selected<array.length;selected++){
-            suiter = new Element(selected, array);
+            stage = new Element(selected, array);
             replaceWithSmallestUnsorted();
         }
     }
 
     private void replaceWithSmallestUnsorted(){
         findSmallest();
-        exchangeCurrentWithLowest(suiter.index);
+        exchangeCurrentWithLowest(stage.index);
     }
 
     private void findSmallest(){
-        lowest = new Element(suiter);
-        int unsortedStartIndex = suiter.index + 1;
+        lowest = new Element(stage);
+        int unsortedStartIndex = stage.index + 1;
         for(int i=unsortedStartIndex; i<array.length;i++){
-            int unsortedIndex = i;
-            handleSmallerValues(unsortedIndex);
+            suiter = new Element(i, array);
+            handleSmallerValues();
         }
     }
 
-    private void handleSmallerValues(int unsortedIndex) {
-        boolean unsortedSelectionIsSmallerThenCurrentLowest = lowest.isLowerThen(array[unsortedIndex]);
+    private void handleSmallerValues() {
+        boolean unsortedSelectionIsSmallerThenCurrentLowest = lowest.isLowerThen(suiter);
         if(unsortedSelectionIsSmallerThenCurrentLowest){
-            int newLowestIndex = unsortedIndex;
-            lowest.set(newLowestIndex, array);
+            lowest.set(suiter);
         }
     }
 

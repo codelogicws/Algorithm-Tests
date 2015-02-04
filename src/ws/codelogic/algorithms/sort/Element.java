@@ -18,7 +18,12 @@ class Element {
         this.value = array[index];
     }
 
-    public boolean isLowerThen(Comparable comparable) {
-        return value.compareTo(comparable) > 0;
+    public boolean isLowerThen(Element comparable) {
+        return value.compareTo(comparable.value) > 0;
+    }
+
+    public void set(Element toBeCopiedElement) {
+        index = toBeCopiedElement.index;
+        value = toBeCopiedElement.value;
     }
 }
