@@ -13,7 +13,8 @@ public class ShellSortTest extends SortTest{
     }
 
     @Test
-    public void correctOrderIsReturned() {
-        correctOrderIsReturned(sorter);
+    public void correctOrderIsReturnedWithCharaters() {
+        sorter = new ShellSort(unsorted2);
+        orderCharatersInTheCorrectWay(sorter);
     }
 }

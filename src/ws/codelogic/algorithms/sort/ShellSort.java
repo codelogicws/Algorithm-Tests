@@ -4,36 +4,26 @@ import java.util.ArrayList;
 
 public class ShellSort extends Sort{
 
-    private int currentIndex;
     private int inner, outer, temp;
     private ArrayList<Integer> intervals;
+    private int interval;
 
     public ShellSort(Comparable[] array){
         this.array = array;
-        computeIntervals(array);
+        createIntervalArray();
     }
 
-    private void computeIntervals(Comparable[] array) {
+    private void createIntervalArray() {
         intervals = new ArrayList<Integer>();
-        int newInterval = 1;
-        while(newInterval <= array.length){
-            intervals.add(newInterval);
-            newInterval = newInterval * 3 + 1;
+        int tempInterval = 1;
+        intervals.add(tempInterval);
+        while((tempInterval = tempInterval*3+1) < array.length){
+            intervals.add(tempInterval);
         }
     }
 
     public void sort() {
-        for(Integer interval : intervals){
-            sort(interval);
-        }
-    }
-
-    private void sort(int interval){
-        for(int i=0; i+interval<array.length; i++){
-            inner = i;
-            outer = i+interval;
-//            swapDown(inner, outer);
-        }
+        printArrayList(intervals);
     }
 
     private void printArrayList(ArrayList<Integer> intervals) {

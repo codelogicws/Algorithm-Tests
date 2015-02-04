@@ -18,7 +18,7 @@ import ws.codelogic.algorithms.union.UnionTest;
         InsertionSortTest.class,
         SelectionSortTest.class,
         SearchTest.class,
-//        ShellSortTest.class,
+        ShellSortTest.class,
         DijkstrasTwoStackTest.class,
         ArrayStackTest.class,
         LinkStackTest.class})
