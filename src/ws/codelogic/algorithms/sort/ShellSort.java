@@ -4,7 +4,8 @@ import java.util.ArrayList;
 
 public class ShellSort extends Sort{
 
-    private int inner, outer, temp;
+    private int inner, outer;
+    private Comparable temp;
     private ArrayList<Integer> intervals;
     private int interval;
 
@@ -31,9 +32,32 @@ public class ShellSort extends Sort{
 
     private void intervalSort() {
         for(inner=0; inner+interval<array.length; inner++){
-            System.out.println("debug-ShellSort: inner " + inner);
-            printArrayList(intervals);
+            outer = inner+interval;
+            order(inner, outer);
         }
+    }
+
+    private void order(int inner, int outer) {
+        orderPair(inner, outer);
+    }
+
+    private void orderPair(int inner, int outer) {
+        boolean outerIsSmallerThenInner = array[outer].compareTo(array[inner]) < 0;
+        if (outerIsSmallerThenInner) {
+            swap(inner, outer);
+            if(inner>interval){
+                inner -= interval;
+                outer -= interval;
+                orderPair(inner, outer);
+            }
+        }
+    }
+
+    private void swap(int inner, int outer) {
+        System.out.println("debug-ShellSort: ");
+        temp = array[inner];
+        array[inner] = array[outer];
+        array[outer] = temp;
     }
 
     private void printArrayList(ArrayList<Integer> intervals) {
