@@ -8,6 +8,11 @@ class Element {
         set(index, array);
     }
 
+    public Element(Element toBeCopiedElement){
+        index = toBeCopiedElement.index;
+        value = toBeCopiedElement.value;
+    }
+
     public void set(int index, Comparable[] array){
         this.index = index;
         this.value = array[index];

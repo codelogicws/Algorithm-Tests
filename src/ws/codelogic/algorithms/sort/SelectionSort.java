@@ -3,6 +3,8 @@ package ws.codelogic.algorithms.sort;
 public class SelectionSort extends Sort{
 
     private Element lowest;
+    private Element stage;
+    private Element suiter;
     private final Comparable[] array;
 
     public SelectionSort(Comparable[] array){
@@ -12,24 +14,30 @@ public class SelectionSort extends Sort{
 
     public void sort() {
         for(int selected=0;selected<array.length;selected++){
-            replaceWithSmallestUnsorted(selected);
+            suiter = new Element(selected, array);
+            replaceWithSmallestUnsorted();
         }
     }
 
-    private void replaceWithSmallestUnsorted(int selected){
-        findSmallest(selected);
-        exchangeCurrentWithLowest(selected);
+    private void replaceWithSmallestUnsorted(){
+        findSmallest();
+        exchangeCurrentWithLowest(suiter.index);
     }
 
-    private void findSmallest(int selected){
-        lowest = new Element(selected, array);
-        for(int i=selected+1; i<array.length;i++){
+    private void findSmallest(){
+        lowest = new Element(suiter);
+        int unsortedStartIndex = suiter.index + 1;
+        for(int i=unsortedStartIndex; i<array.length;i++){
             int unsortedIndex = i;
-            boolean unsortedSelectionIsSmallerThenCurrentLowest = lowest.isLowerThen(array[unsortedIndex]);
-            if(unsortedSelectionIsSmallerThenCurrentLowest){
-                int newLowestIndex = unsortedIndex;
-                lowest.set(newLowestIndex, array);
-            }
+            handleSmallerValues(unsortedIndex);
+        }
+    }
+
+    private void handleSmallerValues(int unsortedIndex) {
+        boolean unsortedSelectionIsSmallerThenCurrentLowest = lowest.isLowerThen(array[unsortedIndex]);
+        if(unsortedSelectionIsSmallerThenCurrentLowest){
+            int newLowestIndex = unsortedIndex;
+            lowest.set(newLowestIndex, array);
         }
     }
 
