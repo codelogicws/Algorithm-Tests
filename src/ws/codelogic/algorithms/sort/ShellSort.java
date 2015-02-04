@@ -33,27 +33,30 @@ public class ShellSort extends Sort{
     private void intervalSort() {
         for(inner=0; inner+interval<array.length; inner++){
             outer = inner+interval;
-            order(inner, outer);
+            order();
         }
     }
 
-    private void order(int inner, int outer) {
-        orderPair(inner, outer);
+    private void order() {
+        orderPair();
     }
 
-    private void orderPair(int inner, int outer) {
-        boolean outerIsSmallerThenInner = array[outer].compareTo(array[inner]) < 0;
-        if (outerIsSmallerThenInner) {
-            swap(inner, outer);
+    private void orderPair() {
+        if (outerIsSmallerThenInner()) {
+            swap();
             if(inner>interval){
                 inner -= interval;
                 outer -= interval;
-                orderPair(inner, outer);
+                orderPair();
             }
         }
     }
 
-    private void swap(int inner, int outer) {
+    private boolean outerIsSmallerThenInner(){
+        return array[outer].compareTo(array[inner]) < 0;
+    }
+
+    private void swap() {
         temp = array[inner];
         array[inner] = array[outer];
         array[outer] = temp;
