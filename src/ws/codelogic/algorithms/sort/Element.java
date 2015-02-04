@@ -26,4 +26,5 @@ class Element {
         index = toBeCopiedElement.index;
         value = toBeCopiedElement.value;
     }
+
 }
