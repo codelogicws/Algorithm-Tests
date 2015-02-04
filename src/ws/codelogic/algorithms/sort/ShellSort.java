@@ -45,8 +45,7 @@ public class ShellSort extends Sort{
         if (outerIsSmallerThenInner()) {
             swap();
             if(inner>interval){
-                inner -= interval;
-                outer -= interval;
+                decrementInnerAndOuterByInterval();
                 orderPair();
             }
         }
@@ -54,6 +53,11 @@ public class ShellSort extends Sort{
 
     private boolean outerIsSmallerThenInner(){
         return array[outer].compareTo(array[inner]) < 0;
+    }
+
+    private void decrementInnerAndOuterByInterval(){
+        inner -= interval;
+        outer -= interval;
     }
 
     private void swap() {
