@@ -17,7 +17,7 @@ public class ShufflerTest {
     @Test
     public void testItemsAreNotInTheSortedOrderTheyWhereSentIn() {
         int[] shuffled = shuffler.shuffle(sorted);
-        assertFalse(arraysNotEqual(shuffled, sorted));
+        assertTrue(arraysNotEqual(shuffled, sorted));
     }
 
     private boolean arraysNotEqual(int[] array1, int[] array2){
@@ -25,11 +25,16 @@ public class ShufflerTest {
         if(array1.length != array2.length){
             arraysEqual = false;
         }else{
-            for(int i=0;i<array1.length;i++){
-                if(array1[i] != array2[i]){
-                    arraysEqual = false;
-                    break;
-                }
+            arraysEqual = checkForMatchs(array1, array2, arraysEqual);
+        }
+        return !arraysEqual;
+    }
+
+    private boolean checkForMatchs(int[] array1, int[] array2, boolean arraysEqual) {
+        for(int i=0;i<array1.length;i++){
+            if(array1[i] != array2[i]){
+                arraysEqual = false;
+                break;
             }
         }
         return arraysEqual;
