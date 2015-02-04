@@ -25,7 +25,7 @@ public class SelectionSort extends Sort{
         lowest = new Element(selected, array);
         for(int i=selected+1; i<array.length;i++){
             int unsortedIndex = i;
-            boolean unsortedSelectionIsSmallerThenCurrentLowest = lowest.value.compareTo(array[unsortedIndex]) > 0;
+            boolean unsortedSelectionIsSmallerThenCurrentLowest = lowest.isLowerThen(array[unsortedIndex]);
             if(unsortedSelectionIsSmallerThenCurrentLowest){
                 int newLowestIndex = unsortedIndex;
                 lowest.set(newLowestIndex, array);
@@ -40,20 +40,6 @@ public class SelectionSort extends Sort{
 
     public Comparable[] getArray() {
         return array;
-    }
-
-    class Element{
-        public Comparable value;
-        public int index;
-
-        public Element(int index, Comparable[] array){
-            set(index, array);
-        }
-
-        public void set(int index, Comparable[] array){
-            this.index = index;
-            this.value = array[index];
-        }
     }
 
 
