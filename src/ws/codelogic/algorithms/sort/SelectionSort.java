@@ -34,8 +34,8 @@ public class SelectionSort extends Sort{
     }
 
     private void handleSmallerValues() {
-        boolean unsortedSelectionIsSmallerThenCurrentLowest = lowest.isLowerThen(suiter);
-        if(unsortedSelectionIsSmallerThenCurrentLowest){
+        boolean suiterIsSmallerThenCurrentLowest = lowest.isLowerThen(suiter);
+        if(suiterIsSmallerThenCurrentLowest){
             lowest.set(suiter);
         }
     }
