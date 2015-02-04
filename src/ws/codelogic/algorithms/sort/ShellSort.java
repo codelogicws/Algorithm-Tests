@@ -32,7 +32,6 @@ public class ShellSort extends Sort{
         for(int i=0; i+interval<array.length; i++){
             inner = i;
             outer = i+interval;
-            System.out.println("debug-ShellSort: inner" + inner + " outer " + outer);
 //            swapDown(inner, outer);
         }
     }
