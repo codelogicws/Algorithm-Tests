@@ -12,7 +12,6 @@ public class Shuffler {
         for(int i=0;i<sorted.length;i++){
             swap(i, random(i));
         }
-        printShuffledArray(sorted);
         return shuffledArray;
     }
 
