@@ -36,3 +36,4 @@ public class InsertionSort extends Sort{
         return array;
     }
 }
+

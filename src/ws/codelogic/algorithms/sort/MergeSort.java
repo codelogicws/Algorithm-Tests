@@ -5,7 +5,15 @@ public class MergeSort {
     private int group1Selection, group2Selection;
     private Comparable[] aux;
 
-    protected void merger(Comparable[] array, Comparable[] emptyAux, int low, int mid, int hi) {
+    public void sort(Comparable[] array, Comparable[] aux, int low, int hi){
+        if(hi <= low) return;
+        int mid = low + (hi-low)/2;
+        sort(array, aux, low, mid);
+        sort(array, aux, mid+1, hi);
+        merge(array, aux, low, mid, hi);
+    }
+
+    protected void merge(Comparable[] array, Comparable[] emptyAux, int low, int mid, int hi) {
         setGroupSelections(low, mid);
         copyToAux(array, emptyAux, low, hi);
 
