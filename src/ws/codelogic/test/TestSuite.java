@@ -6,12 +6,14 @@ import ws.codelogic.algorithms.Stack.ArrayStackTest;
 import ws.codelogic.algorithms.Stack.LinkStackTest;
 import ws.codelogic.algorithms.arithmetic.evaluation.DijkstrasTwoStackTest;
 import ws.codelogic.algorithms.search.SearchTest;
+import ws.codelogic.algorithms.selection.QuickSelectTest;
 import ws.codelogic.algorithms.shuffle.ShufflerTest;
 import ws.codelogic.algorithms.sort.*;
 import ws.codelogic.algorithms.union.UnionTest;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
+        QuickSelectTest.class,
         QuickSortTest.class,
         MergeSortTest.class,
         UnionTest.class,
