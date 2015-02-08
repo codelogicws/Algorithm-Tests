@@ -7,7 +7,7 @@ import org.junit.Test;
 public class ShufflerTest {
 
     private Shuffler shuffler;
-    private int[] sorted = {1,2,3,4,5,6,7,8,9};
+    private Integer[] sorted = {1,2,3,4,5,6,7,8,9};
 
     @Before
     public void setup() {
@@ -16,11 +16,11 @@ public class ShufflerTest {
 
     @Test
     public void testItemsAreNotInTheSortedOrderTheyWhereSentIn() {
-        int[] shuffled = shuffler.shuffle(sorted);
+        Comparable[] shuffled = shuffler.shuffle(sorted);
         assertTrue(arraysNotEqual(shuffled, sorted));
     }
 
-    private boolean arraysNotEqual(int[] array1, int[] array2){
+    private boolean arraysNotEqual(Comparable[] array1, Comparable[] array2){
         boolean arraysEqual = true;
         if(array1.length != array2.length){
             arraysEqual = false;
@@ -30,7 +30,7 @@ public class ShufflerTest {
         return !arraysEqual;
     }
 
-    private boolean checkForMatchs(int[] array1, int[] array2, boolean arraysEqual) {
+    private boolean checkForMatchs(Comparable[] array1, Comparable[] array2, boolean arraysEqual) {
         for(int i=0;i<array1.length;i++){
             if(array1[i] != array2[i]){
                 arraysEqual = false;

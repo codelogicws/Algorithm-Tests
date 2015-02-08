@@ -1,5 +1,7 @@
 package ws.codelogic.algorithms.sort;
 
+import ws.codelogic.algorithms.shuffle.Shuffler;
+
 public class QuickSort extends Sort{
 
     private Comparable temp;
@@ -10,6 +12,8 @@ public class QuickSort extends Sort{
 
     @Override
     public void sort() {
+        Shuffler shuffler = new Shuffler();
+        shuffler.shuffle(array);
         recursiveSort(0, array.length-1);
     }
 
@@ -21,8 +25,6 @@ public class QuickSort extends Sort{
         if(mid+1 < high){
             recursiveSort(mid + 1, high);
         }
-        System.out.println("Test");
-        debugPrintArray();
     }
 
     public int partitioning(int low, int high){
@@ -32,28 +34,10 @@ public class QuickSort extends Sort{
         while(low<=high) {
             while (less(array[++low], array[pivot])) ;
             while (less(array[pivot], array[--high])) ;
-            debug(low, high);
             swap(low, high);
-            System.out.println("Swtich");
-            debug(low, high);
         }
         swap(pivot, high);
-        debugPrintArray();
         return high;
-    }
-
-    private void debugPrintArray() {
-        for(Comparable c : array){
-            printWithComma(c);
-        }
-    }
-
-    private void debug(int low, int high){
-        System.out.println("Debug-QuickSort low is: " + array[low] + " high is: " + array[high]);
-    }
-
-    private void printWithComma(Comparable c){
-        System.out.print(c + ", ");
     }
 
     private void swap(int low, int high) {

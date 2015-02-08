@@ -5,9 +5,10 @@ import java.util.Random;
 public class Shuffler {
 
     private Random random = new Random();
-    private int[] shuffledArray;
+    private Comparable temp;
+    private Comparable[] shuffledArray;
 
-    public int[] shuffle(int[] sorted) {
+    public Comparable[] shuffle(Comparable[] sorted) {
         shuffledArray = sorted.clone();
         for(int i=0;i<sorted.length;i++){
             swap(i, random(i));
@@ -16,7 +17,7 @@ public class Shuffler {
     }
 
     private void swap(int i, int random) {
-        int temp = shuffledArray[i];
+        temp = shuffledArray[i];
         shuffledArray[i] = shuffledArray[random];
         shuffledArray[random] = temp;
     }
@@ -28,8 +29,8 @@ public class Shuffler {
         return 0;
     }
 
-    private void printShuffledArray(int[] array){
-        for(int i : array){
+    private void printShuffledArray(Comparable[] array){
+        for(Comparable i : array){
             System.out.print(i + ", ");
         }
     }
