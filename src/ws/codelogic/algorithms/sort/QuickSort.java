@@ -1,60 +1,44 @@
 package ws.codelogic.algorithms.sort;
 
-import ws.codelogic.algorithms.shuffle.Shuffler;
+public class QuickSort {
 
-public class QuickSort extends Sort{
+    private static Comparable temp;
 
-    private Comparable temp;
-
-    public QuickSort(Comparable[] array){
-        this.array = array;
+    public static void sort(Comparable[] a){
+        sort(a, 0, a.length -1);
     }
 
-    @Override
-    public void sort() {
-//        Shuffler shuffler = new Shuffler();
-//        array = shuffler.shuffle(array);
-        //DEBUG
-        for(Comparable c : array){
-            System.out.println(c + ", ");
-        }
-        //DEBUG
-        recursiveSort(0, array.length-1);
+    private static void sort(Comparable[] a, int lo, int hi){
+        if(hi <= lo) return;
+        int j = partition(a, lo, hi);
+        sort(a, lo, j-1);
+        sort(a, j+1, hi);
     }
 
-    private void recursiveSort(int low, int high){
-        int mid = partitioning(low, high);
-        if(low < mid-1){
-            recursiveSort(low, mid-1);
+    private static int partition(Comparable[] a, int lo, int hi){
+        int i = lo, j = hi+1;
+        while(true){
+            while(less(a[++i], a[lo]))
+                if(i == hi) break;
+            while(less(a[lo], a[--j]))
+                if(j == lo) break;
+
+            if(i >= j) break;
+            exch(a, i, j);
         }
-        if(mid+1 < high){
-            recursiveSort(mid + 1, high);
-        }
+
+        exch(a, lo, j);
+        return j;
     }
 
-    public int partitioning(int low, int high){
-        int pivot = low;
-        high++;
-
-        while(low<=high) {
-            while (less(array[++low], array[pivot])) ;
-            while (less(array[pivot], array[--high])) ;
-            swap(low, high);
-        }
-        swap(pivot, high);
-        return high;
+    private static boolean less(Comparable less, Comparable more){
+        return less.compareTo(more) < 0;
     }
 
-    private void swap(int low, int high) {
-        if(low<high){
-            temp = array[low];
-            array[low] = array[high];
-            array[high] = temp;
-        }
-    }
-
-    private boolean less(Comparable less, Comparable more){
-        return less.compareTo(more) == -1;
+    private static void exch(Comparable[] array, int first, int second){
+        temp = array[first];
+        array[first] = array[second];
+        array[second] = temp;
     }
 
 }
