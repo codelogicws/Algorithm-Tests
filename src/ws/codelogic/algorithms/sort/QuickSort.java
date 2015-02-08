@@ -12,8 +12,13 @@ public class QuickSort extends Sort{
 
     @Override
     public void sort() {
-        Shuffler shuffler = new Shuffler();
-        shuffler.shuffle(array);
+//        Shuffler shuffler = new Shuffler();
+//        array = shuffler.shuffle(array);
+        //DEBUG
+        for(Comparable c : array){
+            System.out.println(c + ", ");
+        }
+        //DEBUG
         recursiveSort(0, array.length-1);
     }
 

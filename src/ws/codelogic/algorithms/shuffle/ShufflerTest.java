@@ -8,6 +8,7 @@ public class ShufflerTest {
 
     private Shuffler shuffler;
     private Integer[] sorted = {1,2,3,4,5,6,7,8,9};
+    private Integer[] toBeShuffled = sorted.clone();
 
     @Before
     public void setup() {
@@ -16,8 +17,8 @@ public class ShufflerTest {
 
     @Test
     public void testItemsAreNotInTheSortedOrderTheyWhereSentIn() {
-        Comparable[] shuffled = shuffler.shuffle(sorted);
-        assertTrue(arraysNotEqual(shuffled, sorted));
+        shuffler.shuffle(toBeShuffled);
+        assertTrue(arraysNotEqual(toBeShuffled, sorted));
     }
 
     private boolean arraysNotEqual(Comparable[] array1, Comparable[] array2){

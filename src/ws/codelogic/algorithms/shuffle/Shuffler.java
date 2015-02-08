@@ -6,20 +6,19 @@ public class Shuffler {
 
     private Random random = new Random();
     private Comparable temp;
-    private Comparable[] shuffledArray;
+    private Comparable[] array;
 
-    public Comparable[] shuffle(Comparable[] sorted) {
-        shuffledArray = sorted.clone();
-        for(int i=0;i<sorted.length;i++){
+    public void shuffle(Comparable[] array) {
+        this.array = array;
+        for(int i=0;i<array.length;i++){
             swap(i, random(i));
         }
-        return shuffledArray;
     }
 
     private void swap(int i, int random) {
-        temp = shuffledArray[i];
-        shuffledArray[i] = shuffledArray[random];
-        shuffledArray[random] = temp;
+        temp = array[i];
+        array[i] = array[random];
+        array[random] = temp;
     }
 
     private int random(int index){
