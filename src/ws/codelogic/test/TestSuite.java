@@ -9,10 +9,12 @@ import ws.codelogic.algorithms.search.SearchTest;
 import ws.codelogic.algorithms.selection.QuickSelectTest;
 import ws.codelogic.algorithms.shuffle.ShufflerTest;
 import ws.codelogic.algorithms.sort.*;
+import ws.codelogic.algorithms.sort.duplicates.DSortTest;
 import ws.codelogic.algorithms.union.UnionTest;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
+        DSortTest.class,
         QuickSelectTest.class,
         QuickSortTest.class,
         MergeSortTest.class,
