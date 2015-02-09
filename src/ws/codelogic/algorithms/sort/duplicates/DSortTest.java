@@ -27,6 +27,20 @@ public class DSortTest {
         testArray(unsorted, sorted);
     }
 
+    @Test
+    public void testEdgeCase1() {
+        Integer[] unsorted = {1,5,4,4,1,5};
+        Integer[] sorted = {1,1,4,4,5,5};
+        testArray(unsorted, sorted);
+    }
+
+    @Test
+    public void testEdgeCase2() {
+        Integer[] unsorted = {5,1,4,5,4,1};
+        Integer[] sorted = {1,1,4,4,5,5};
+        testArray(unsorted, sorted);
+    }
+
     private void testArray(Comparable[] unsorted, Comparable[] sorted){
         sort.sort(unsorted);
         Comparable[] newlySorted = unsorted;
