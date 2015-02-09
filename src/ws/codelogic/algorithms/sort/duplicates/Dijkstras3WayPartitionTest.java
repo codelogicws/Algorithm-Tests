@@ -4,13 +4,13 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class DSortTest {
+public class Dijkstras3WayPartitionTest {
 
-    private DSort sort;
+    private Dijkstras3WayPartition sort;
 
     @Before
     public void setup() {
-        sort = new DSort();
+        sort = new Dijkstras3WayPartition();
     }
 
     @Test

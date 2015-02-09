@@ -2,7 +2,7 @@ package ws.codelogic.algorithms.sort.duplicates;
 
 import ws.codelogic.algorithms.Commons.Exchange;
 
-public class DSort{
+public class Dijkstras3WayPartition {
 
     public void sort(Comparable[] array) {
         sort(array, 0, array.length - 1);
