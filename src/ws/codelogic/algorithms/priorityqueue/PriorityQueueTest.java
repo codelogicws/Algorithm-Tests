@@ -26,7 +26,7 @@ public class PriorityQueueTest {
     }
 
     @Test
-    public void adding3ObjectYeildsThoseObjectsInOrder() {
+    public void adding9ObjectYeildsThoseObjectsInOrder() {
         queue.add(5);
         queue.add(7);
         queue.add(9);
@@ -36,7 +36,13 @@ public class PriorityQueueTest {
         queue.add(58);
         queue.add(8);
         queue.add(450);
+        checkNumber(450);
+        checkNumber(101);
+        checkNumber(58);
+        checkNumber(24);
+        checkNumber(12);
         checkNumber(9);
+        checkNumber(8);
         checkNumber(7);
         checkNumber(5);
     }
