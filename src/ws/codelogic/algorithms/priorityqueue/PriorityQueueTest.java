@@ -10,19 +10,19 @@ public class PriorityQueueTest {
 
     @Before
     public void setUp() {
-        Integer[] array = new Integer[5];
+        Integer[] array = new Integer[10];
         queue = new BinaryTree(array);
     }
 
     @Test
     public void adding1ObjectYeildsThatObject() {
-        queue.add(9);
-        checkNumber(9);
+        queue.add(20);
+        checkNumber(20);
     }
 
     private void checkNumber(Integer numberToTest){
         Integer numberFromQueue = (Integer)queue.remove();
-        assertEquals(numberFromQueue, numberToTest);
+        assertEquals(numberToTest, numberFromQueue);
     }
 
     @Test
@@ -30,9 +30,15 @@ public class PriorityQueueTest {
         queue.add(5);
         queue.add(7);
         queue.add(9);
+        queue.add(12);
+        queue.add(24);
+        queue.add(101);
+        queue.add(58);
+        queue.add(8);
+        queue.add(450);
         checkNumber(9);
+        checkNumber(7);
         checkNumber(5);
-        checkNumber(1);
     }
 
 

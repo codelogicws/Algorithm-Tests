@@ -4,6 +4,7 @@ public class BinaryTree{
 
     private Comparable[] elements;
     private int indexOfLastElement;
+    private Comparable temp;
 
     public BinaryTree(Comparable[] emptyArray){
         elements = emptyArray;
@@ -13,16 +14,30 @@ public class BinaryTree{
     public void add(Comparable element){
         elements[++indexOfLastElement] = element;
         swim(indexOfLastElement);
+        //DEBUG
+        for(Comparable c : elements){
+            System.out.println(c);
+        }
+        System.out.println("--------------");
+        //DEBUG
     }
 
     private void swim(int index) {
         if(parentIsLess(index)){
-            //DEBUG
-            System.out.println("debug-BinaryTree: need to swap " + index + " and " + parrentIndex(index));
-            //DEBUG
-//                swapWithParent(index);
-//                swim(indexOfParent(index));
+            swapWithParent(index);
+            swim(parrentIndex(index));
         }
+    }
+
+    private void swapWithParent(int index){
+        int parentIndex = parrentIndex(index);
+        exchange(index, parentIndex);
+    }
+
+    private void exchange(int index, int parentIndex) {
+        temp = elements[index];
+        elements[index] = elements[parentIndex];
+        elements[parentIndex] = temp;
     }
 
     private boolean parentIsLess(int index){
@@ -38,7 +53,7 @@ public class BinaryTree{
     private int parrentIndex(int index) {
         int treeIndex = index + 1;
         int parrentTreeIndex = treeIndex/2;
-        return parrentTreeIndex -1;
+        return parrentTreeIndex - 1;
     }
 
 
@@ -48,10 +63,6 @@ public class BinaryTree{
 
     private boolean hasParent(int index) {
         return index > 0;
-    }
-
-    private int indexOfParent(int currentIndex){
-        return currentIndex/2;
     }
 
     public Comparable remove(){
