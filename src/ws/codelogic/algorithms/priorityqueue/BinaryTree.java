@@ -17,6 +17,7 @@ public class BinaryTree{
     public void add(Comparable element){
         elements[++indexOfLastElement] = element;
         swim(indexOfLastElement);
+        debug();
     }
 
     private void swim(int index) {
@@ -65,20 +66,11 @@ public class BinaryTree{
     public Comparable remove(){
         exchange(0, indexOfLastElement);
         sink(0);
-        elements[indexOfLastElement] = 0;
         return elements[indexOfLastElement--];
     }
 
     private void sink(int index){
-        //DEBUG
-        System.out.println("debug-BinaryTree: ");
-        for(Comparable c : elements){
-            System.out.println(c);
-        }
-        System.out.println("--------------");
-        System.out.println(index + " " + child1(index));
-        //DEBUG
-
+        debug();
         child1 = child1(index);
         child2 = child2(index);
 
@@ -91,6 +83,16 @@ public class BinaryTree{
 
     private int child2(int index){
         return child1(index)-1;
+    }
+
+    private void debug(){
+        //DEBUG
+        System.out.println("debug-BinaryTree: ");
+        for(Comparable c : elements){
+            System.out.println(c);
+        }
+        System.out.println("--------------");
+        //DEBUG
     }
 
 
