@@ -6,12 +6,12 @@ import static org.junit.Assert.*;
 
 public class PriorityQueueTest {
 
-    private BinaryTree<Integer> queue;
+    private BinaryTree queue;
 
     @Before
     public void setUp() {
         Integer[] array = new Integer[5];
-        queue = new BinaryTree<Integer>(array);
+        queue = new BinaryTree(array);
     }
 
     @Test
@@ -21,18 +21,23 @@ public class PriorityQueueTest {
     }
 
     private void checkNumber(Integer numberToTest){
-        Integer numberFromQueue = queue.remove();
+        Integer numberFromQueue = (Integer)queue.remove();
         assertEquals(numberFromQueue, numberToTest);
     }
 
     @Test
     public void adding3ObjectYeildsThoseObjectsInOrder() {
         queue.add(5);
-        queue.add(1);
+        queue.add(7);
         queue.add(9);
         checkNumber(9);
         checkNumber(5);
         checkNumber(1);
     }
+
+
+
+    //array is full
+    //array is empty
 
 }
