@@ -5,8 +5,6 @@ public class BinaryTree{
     private Comparable[] elements;
     private int indexOfLastElement;
     private Comparable temp;
-    private int child1;
-    private int child2;
 
 
     public BinaryTree(Comparable[] emptyArray){
@@ -17,7 +15,6 @@ public class BinaryTree{
     public void add(Comparable element){
         elements[++indexOfLastElement] = element;
         swim(indexOfLastElement);
-        debug();
     }
 
     private void swim(int index) {
@@ -62,36 +59,29 @@ public class BinaryTree{
     }
 
     public Comparable remove(){
+        Comparable returnElement = elements[1];
         exchange(1, indexOfLastElement);
+        elements[indexOfLastElement--] = 0;
         sink(1);
-        return elements[indexOfLastElement--];
+        return returnElement;
     }
 
     private void sink(int index){
-        debug();
-        child1 = child1(index);
-        child2 = child2(index);
-
-        //TODO here is where you work a object down. need to make sure you move the object down to the largest of the 2 leaves
+        while(2*index <= indexOfLastElement){
+            int child = 2*index;
+            if(child <= indexOfLastElement && less(child, child + 1)){
+                child++;
+            }
+            if(less(child, index)){
+                break;
+            }
+            exchange(index, child);
+            index = child;
+        }
     }
 
     private int child1(int index){
         return (index+1)*2;
     }
-
-    private int child2(int index){
-        return child1(index)-1;
-    }
-
-    private void debug(){
-        //DEBUG
-        System.out.println("debug-BinaryTree: ");
-        for(Comparable c : elements){
-            System.out.println(c);
-        }
-        System.out.println("--------------");
-        //DEBUG
-    }
-
 
 }
