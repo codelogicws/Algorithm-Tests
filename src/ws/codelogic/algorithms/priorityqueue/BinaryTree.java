@@ -80,8 +80,4 @@ public class BinaryTree{
         }
     }
 
-    private int child1(int index){
-        return (index+1)*2;
-    }
-
 }
