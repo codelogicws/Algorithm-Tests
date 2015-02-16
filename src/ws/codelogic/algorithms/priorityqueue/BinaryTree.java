@@ -11,7 +11,7 @@ public class BinaryTree{
 
     public BinaryTree(Comparable[] emptyArray){
         elements = emptyArray;
-        indexOfLastElement = -1;
+        indexOfLastElement = 0;
     }
 
     public void add(Comparable element){
@@ -49,9 +49,7 @@ public class BinaryTree{
     }
 
     private int parrentIndex(int index) {
-        int treeIndex = index + 1;
-        int parrentTreeIndex = treeIndex/2;
-        return parrentTreeIndex - 1;
+        return index/2;
     }
 
 
@@ -60,12 +58,12 @@ public class BinaryTree{
     }
 
     private boolean hasParent(int index) {
-        return index > 0;
+        return index > 1;
     }
 
     public Comparable remove(){
-        exchange(0, indexOfLastElement);
-        sink(0);
+        exchange(1, indexOfLastElement);
+        sink(1);
         return elements[indexOfLastElement--];
     }
 
