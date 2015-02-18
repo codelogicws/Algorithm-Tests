@@ -11,10 +11,17 @@ public class SymbolTable <T>{
         values = emptyValuesArray;
     }
 
-    public void add(Comparable key, T value){
+    private void add(Comparable key, T value){
         currentIndex ++;
+        throwOverFlowIfLarge();
         keys[currentIndex] = key;
         values[currentIndex] = value;
+    }
+
+    private void throwOverFlowIfLarge() {
+        if(currentIndex >= values.length){
+            throw new SymbolTableExceptions.OverFlow();
+        }
     }
 
     public T get(Comparable key){
@@ -27,6 +34,14 @@ public class SymbolTable <T>{
     }
 
     public boolean contains(Comparable key){
-        return get(key) != null;
+        return (get(key) != null);
     }
+
+    public void put(Comparable key, T value){
+        boolean doesNotContain = !contains(key);
+        if(doesNotContain){
+            add(key, value);
+        }
+    }
+
 }
