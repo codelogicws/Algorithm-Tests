@@ -4,6 +4,7 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 import ws.codelogic.algorithms.Stack.ArrayStackTest;
 import ws.codelogic.algorithms.Stack.LinkStackTest;
+import ws.codelogic.algorithms.SymbolTable.SymbolTableTest;
 import ws.codelogic.algorithms.arithmetic.evaluation.DijkstrasTwoStackTest;
 import ws.codelogic.algorithms.priorityqueue.PriorityQueueTest;
 import ws.codelogic.algorithms.search.SearchTest;
@@ -15,6 +16,7 @@ import ws.codelogic.algorithms.union.UnionTest;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
+        SymbolTableTest.class,
         PriorityQueueTest.class,
         Dijkstras3WayPartitionTest.class,
         QuickSelectTest.class,

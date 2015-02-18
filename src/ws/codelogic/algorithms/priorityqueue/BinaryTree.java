@@ -69,7 +69,7 @@ public class BinaryTree{
     private void sink(int index){
         while(2*index <= indexOfLastElement){
             int child = 2*index;
-            if(child <= indexOfLastElement && less(child, child + 1)){
+            if(child < indexOfLastElement && less(child, child + 1)){
                 child++;
             }
             if(less(child, index)){
